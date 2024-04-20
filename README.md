@@ -1,9 +1,9 @@
 # Análise de Churn de Funcionários
 
-<img src="https://github.com/waltercrastobr/Analise_Churn/blob/main/img_churn.jpg" alt="Descrição da imagem">
+<img src="https://github.com/waltercrastobr/Analise-Churn/blob/main/img_churn.jpg" alt="Descrição da imagem">
 
 
-Este repositório contém uma análise de dados completa para prever a probabilidade de um funcionário deixar uma empresa, com foco em estratégias de retenção de funcionários. O projeto utiliza uma [base](https://github.com/waltercrastobr/Analise_Churn/blob/main/Human_Resources.csv) de dados fictícia da IBM (International Business Machine Corporation), disponível no [Kaggle](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fwww.kaggle.com%2Fpavansubhasht%2Fibm-hr-analytics-attrition-dataset)
+Este repositório contém uma análise de dados completa para prever a probabilidade de um funcionário deixar uma empresa, com foco em estratégias de retenção de funcionários. O projeto utiliza uma [base](https://github.com/waltercrastobr/Analise-Churn/blob/main/relatorio_ganhos.pdf) de dados fictícia da IBM (International Business Machine Corporation), disponível no [Kaggle](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fwww.kaggle.com%2Fpavansubhasht%2Fibm-hr-analytics-attrition-dataset)
 , e segue uma abordagem de aprendizado supervisionado para classificação. 
 
 ## Introdução
@@ -106,7 +106,7 @@ Além disso, foram utilizados os seguintes modelos de machine learning:
 
 # Notebooks
 
-## [Análise Exploratória de Dados (EDA)](https://github.com/waltercrastobr/Analise_Churn/blob/main/EDA_Analise_Churn%20(1).ipynb)
+## [Análise Exploratória de Dados](https://github.com/waltercrastobr/Analise-Churn/blob/main/EDA_Analise_Churn.ipynb)
 - **Objetivo:** Desenvolver uma análise exploratória de dados para obtenção de insights valiosos e preparação da base de dados para criação de modelos preditivos.
   1. Analise e Tratamento dos dados.
   2. Insights gerados a partir dos dados.
@@ -115,7 +115,7 @@ Além disso, foram utilizados os seguintes modelos de machine learning:
 - **Resultados:**
 Realizei a limpeza, tratamento e transformação dos dados, convertendo variáveis categóricas em numéricas e padronizando os valores. A base de dados estava livre de outliers, dados nulos e duplicados, o que simplificou o processo. Em seguida, criei gráficos comparativos entre os funcionários que saíram e os que permaneceram na empresa para obter insights, documentando essas descobertas em um relatório no notebook. Posteriormente, dividi os dados em conjuntos de treino e teste e os preparei para a criação dos modelos preditivos.
 
-## [Modelos Preditivos](https://github.com/waltercrastobr/Analise_Churn/blob/main/Modelos_Preditivos__An%C3%A1lise__Churn%20(1).ipynb)
+## [Modelos Preditivos](https://github.com/waltercrastobr/Analise-Churn/blob/main/Modelos_Preditivos__An%C3%A1lise__Churn.ipynb)
 
 - **Objetivo:** Desenvolver um modelo preditivo preciso para prever a probabilidade de churn de funcionários.
 - **Passos:**
@@ -126,7 +126,7 @@ Realizei a limpeza, tratamento e transformação dos dados, convertendo variáve
 - **Resultados:**
 Foram inicialmente testados os modelos regressão logística e no random forest devido à sua capacidade com dados desbalanceados. Após avaliar seus desempenhos, outros modelos foram considerados para melhorar as métricas de recall e F1-score, cruciais na análise de churn. Além da regressão logística e do XGB, foram testados o AdaBoostClassifier, SVC, KNeighborsClassifier e GaussianNB. Os melhores resultados foram obtidos com a regressão logística e o XGB, levando a uma otimização desses modelos para maximizar seu desempenho.
 
-## [Otimização de Modelos](https://github.com/waltercrastobr/Analise_Churn/blob/main/Otimizacao_Modelos__An%C3%A1lise__Churn%20(1).ipynb)
+## [Otimização de Modelos](https://github.com/waltercrastobr/Analise-Churn/blob/main/Otimizacao_Modelos__An%C3%A1lise__Churn.ipynb)
 
 - **Objetivo:** Aprimorar os modelos existentes, selecionando os melhores atributos e lidando com o desbalanceamento de classes.
 - **Passos:**
@@ -137,7 +137,7 @@ Foram inicialmente testados os modelos regressão logística e no random forest 
 - **Resultados:**
 Inicialmente, foi realizada uma seleção de atributos na tentativa de melhorar o desempenho do modelo, porém não houve melhora significativa, possivelmente devido à perda de alguns dados importantes durante o processo. Em seguida, foi identificado que o desbalanceamento de classes poderia ser o principal problema. Para lidar com isso, foram utilizadas técnicas de oversampling e undersampling. Após a aplicação dessas técnicas e a verificação de possíveis problemas de overfitting, foi constatado que o modelo de regressão logística com oversampling (SMOTE) apresentou o melhor desempenho.
 
-## [Salvando o Classificador](https://github.com/waltercrastobr/Analise_Churn/blob/main/Otimizacao_Modelos__An%C3%A1lise__Churn%20(1).ipynb)
+## [Salvando o Classificador](https://github.com/waltercrastobr/Analise-Churn/blob/main/Classificador_Salvo_An%C3%A1lise__Churn.ipynb)
 
 - **Objetivo:** Salvar o melhor classificador obtido e testá-lo para verificar sua capacidade de prever corretamente o churn de funcionários.
 - **Passos:**
@@ -145,9 +145,9 @@ Inicialmente, foi realizada uma seleção de atributos na tentativa de melhorar 
   2. Carregamento e teste do modelo salvo.
  
 - **Resultados:**
-O modelo foi salvaguardado com sucesso e submetido a testes bem-sucedidos, utilizando o método pickle para sua preservação. Demonstrou uma capacidade de previsão sólida em relação à probabilidade de saída de funcionário, alcançando 80% de recall para a classe alvo e 77% de F1-score para a mesma classe. O modelo está disponível para acesso e uso através deste [link](https://github.com/waltercrastobr/Analise_Churn/blob/main/modelo_rl_smote.pkl), representando uma ferramenta valiosa para a empresa na identificação e retenção de seus colaboradores.
+O modelo foi salvaguardado com sucesso e submetido a testes bem-sucedidos, utilizando o método pickle para sua preservação. Demonstrou uma capacidade de previsão sólida em relação à probabilidade de saída de funcionário, alcançando 80% de recall para a classe alvo e 77% de F1-score para a mesma classe. O modelo está disponível para acesso e uso através deste [link](https://github.com/waltercrastobr/Analise-Churn/blob/main/modelo_rl_smote.pkl), representando uma ferramenta valiosa para a empresa na identificação e retenção de seus colaboradores.
 
-## [Relatório de Resultados Financeiros](https://github.com/waltercrastobr/Analise_Churn/blob/main/relatorio_ganhos%20(1).pdf)
+## [Relatório de Resultados Financeiros](https://github.com/waltercrastobr/Analise-Churn/blob/main/relatorio_ganhos.pdf)
 Em conclusão, o uso do modelo resultou em uma economia significativa de custos e tempo para a empresa, em comparação com o cenário sem o modelo. Em cinco meses, a diferença total foi de $2,983,440, considerando os custos de contratação (reposição dos 'churners') e o lucro acumulado. 
 
 
