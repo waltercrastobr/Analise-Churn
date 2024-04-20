@@ -3,7 +3,7 @@
 <img src="https://github.com/waltercrastobr/Analise-Churn/blob/main/img_churn.jpg" alt="Descrição da imagem">
 
 
-Este repositório contém uma análise de dados completa para prever a probabilidade de um funcionário deixar uma empresa, com foco em estratégias de retenção de funcionários. O projeto utiliza uma [base](https://github.com/waltercrastobr/Analise-Churn/blob/main/relatorio_ganhos.pdf) de dados fictícia da IBM (International Business Machine Corporation), disponível no [Kaggle](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fwww.kaggle.com%2Fpavansubhasht%2Fibm-hr-analytics-attrition-dataset)
+Este repositório contém uma análise de dados completa para prever a probabilidade de um funcionário deixar uma empresa, com foco em estratégias de retenção de funcionários. O projeto utiliza uma [base](https://github.com/waltercrastobr/Analise-Churn/blob/main/Human_Resources.csv) de dados fictícia da IBM (International Business Machine Corporation), disponível no [Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
 , e segue uma abordagem de aprendizado supervisionado para classificação. 
 
 ## Introdução
